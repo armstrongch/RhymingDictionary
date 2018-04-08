@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Website? More like "Head Lice", am I right ladies?</title>
+    <title>RHRD</title>
   <style type="text/css">
   	table {
     	outline: 1px black solid;
@@ -19,15 +19,15 @@
         <tr>
         	<td>
             	<select id="select" onchange="selectRhyme()">
-                	<option>Something</option>
-                    <option>Something Else</option>
+                	<option>Web site</option>
+                    <option>Saturday Night Live</option>
                 </select>
             </td>
             <td>
             	<p>? More like </p>
             </td>
             <td>
-            	<p><span id="rhyme">something else</span>, am I right ladies?
+            	<p>"<span id="rhyme">head lice</span>", am I right ladies?
             </td>
         </tr>
     </table>
@@ -36,7 +36,15 @@
         {
         	sel = document.getElementById("select");
             opText = sel.options[sel.selectedIndex].text;
-            alert(opText);
+            span = document.getElementById("rhyme");
+            if (opText == "Web site")
+            {
+            	span.innerHTML = "head lice";
+            }
+            else if (opText == "Saturday Night Live")
+            {
+            	span.innerHTML = "rasberry-fried pies";
+            }
         }
     </script>
   </body>
