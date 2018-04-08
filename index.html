@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Website? More like "Head Lice", am I right ladies?</title>
+  <style type="text/css">
+  	table {
+    	outline: 1px black solid;
+    }
+  </style>
+  </head>
+  <body>
+  	<table>
+    	<tr>
+        	<td colspan="4">
+            	Redbeard's Handy Rhyming Dictionary
+            </td>
+        </tr>
+        <tr>
+        	<td>
+            	<select id="select" onchange="selectRhyme()">
+                	<option>Something</option>
+                    <option>Something Else</option>
+                </select>
+            </td>
+            <td>
+            	<p>? More like </p>
+            </td>
+            <td>
+            	<p><span id="rhyme">something else</span>, am I right ladies?
+            </td>
+        </tr>
+    </table>
+    <script>
+    	function selectRhyme()
+        {
+        	sel = document.getElementById("select");
+            opText = sel.options[sel.selectedIndex].text;
+            alert(opText);
+        }
+    </script>
+  </body>
+</html>
