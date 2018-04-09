@@ -12,7 +12,7 @@
   <body>
   	<table>
     	<tr>
-        	<td colspan="4">
+        	<td colspan="2">
             	Redbeard's Handy Rhyming Dictionary
             </td>
         </tr>
@@ -21,14 +21,19 @@
             	<select id="select" onchange="selectRhyme()">
                 	<option>Web site</option>
                     <option>Saturday Night Live</option>
+                    <option>Edinburgh Tram Inquiry</option>
+                    <option>Aircraft losses to missiles</option>
+                    <option>Taroona Rugby Club</option>
                 </select>
             </td>
             <td>
-            	<p>? More like </p>
+            	<p>? More like "<span id="rhyme">head lice</span>", am I right ladies?
             </td>
-            <td>
-            	<p>"<span id="rhyme">head lice</span>", am I right ladies?
-            </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+          	<a id="link" href="https://en.wikipedia.org/wiki/Website">More Information</a>
+          </td>
         </tr>
     </table>
     <script>
@@ -37,13 +42,32 @@
         	sel = document.getElementById("select");
             opText = sel.options[sel.selectedIndex].text;
             span = document.getElementById("rhyme");
+            link = document.getElementById("link");
+            wikiLink = "https://en.wikipedia.org/wiki/";
             if (opText == "Web site")
             {
             	span.innerHTML = "head lice";
+                link.setAttribute("href", wikiLink + "Website");
             }
             else if (opText == "Saturday Night Live")
             {
             	span.innerHTML = "strawberry-fried pies";
+                link.setAttribute("href", wikiLink + "Saturday_Night_Live");
+            }
+            else if (opText == "Edinburgh Tram Inquiry")
+            {
+            	span.innerHTML = "drop a turd in Uncle Sam's world series";
+                link.setAttribute("href", wikiLink + "Edinburgh_Tram_Inquiry");
+            }
+            else if (opText == "Aircraft losses to missiles")
+            {
+            	span.innerHTML = "glare at bosses of bitches";
+                link.setAttribute("href", wikiLink + "List_of_US_aircraft_losses_to_missiles_during_the_Vietnam_War");
+            }
+            else if (opText == "Taroona Rugby Club")
+            {
+            	span.innerHTML = "boner for ugly hugs";
+                link.setAttribute("href", wikiLink + "Taroona_Rugby_Club");
             }
         }
     </script>
